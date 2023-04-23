@@ -2,35 +2,43 @@
 import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import Menu from './components/Menu.vue'
+import Greeting from './components/Greeting.vue'
+import TechStacks from './components/TechStacks.vue'
 </script>
 
 <template>
-  <header>
-    <Menu class="border-solid border-2 border-indigo-600"/>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
+  <div class="m-2">
+     <Menu class="border-solid border-2 border-indigo-600"/>
+    <header class="">
+      <div class="lg:float-right">
+        Face photo
+      </div>
+      <div class="lg:float-left">
+        <Greeting class="mt-6 mb-10"/>
+        <TechStacks />
+      </div>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
 
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
-  </header>
+      <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-  <!-- <RouterView /> -->
+      <div class="wrapper">
+        <HelloWorld msg="You did it!" />
+
+        <nav>
+          <RouterLink to="/">Home</RouterLink>
+          <RouterLink to="/about">About</RouterLink>
+        </nav>
+      </div> -->
+    </header>
+
+    <!-- <RouterView /> -->
+  </div>
 </template>
 
 <style scoped>
 header {
-  margin: .5rem 1rem;
 
-  @media (min-width: 640px) {
-    margin: 1rem 2rem;
-  }
 }
-
 /* .logo {
   display: block;
   margin: 0 auto 2rem;
