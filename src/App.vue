@@ -2,89 +2,64 @@
 import { RouterLink, RouterView } from 'vue-router'
 // import HelloWorld from './components/HelloWorld.vue'
 import Menu from './components/Menu.vue'
+import Greeting from './components/Greeting.vue'
+import TechStacks from './components/TechStacks.vue'
 </script>
 
 <template>
-  <header>
-    <Menu class="border-solid border-2 border-indigo-600"/>
-    <!-- <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div> -->
-  </header>
-
-  <!-- <RouterView /> -->
+  <div>
+    <header class="my-2 mx-6">
+      <Menu class="border-solid border-2 border-indigo-600"/>
+      <div>
+        <div id="ribbon-photo">
+          <div id="img-oanh" class="rounded-full"></div>
+        </div>
+        <div id="banner-intro" class="border-solid border-2 border-indigo-600">
+          <Greeting class="mt-6 mb-10"/>
+          <TechStacks />
+        </div>
+      </div>  
+    </header>   
+  </div>
 </template>
 
 <style scoped>
-header {
-  margin: .5rem 1rem;
+#ribbon-photo {
+  position: absolute;
+  inset: 0 0 auto auto;
+  width: 400px;
+  height: 200px;
+  background: orange;
+  transform-origin: 100% 0; 
+  /* or top right */
+  transform: translate(0, -90%) rotate(-45deg);
 
-  @media (min-width: 640px) {
-    margin: 1rem 2rem;
+  @media screen and (min-width: 1024px) {
+    width: 560px;
+    height: 300px;
+    transform: translate(-29.3%, -80%) rotate(-45deg);
   }
 }
-
-/* .logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  font-size: 12px;
-  text-align: center;
-  margin-top: 2rem;
-}
-
-nav a.router-link-exact-active {
-  color: var(--color-text);
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
-}
-
-nav a {
-  display: inline-block;
-  padding: 0 1rem;
-  border-left: 1px solid var(--color-border);
-}
-
-nav a:first-of-type {
-  border: 0;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+#img-oanh {
+  background-image: url('./assets/images/oanh-smile-fire.jpeg');
+  background-size: cover;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  left: -100px;
+  transform: rotate(45deg);
+  
+  @media screen and (min-width: 1024px) {
+    width: 300px;
+    height: 300px;
+    left: -150px;
   }
+}
+#banner-intro {
+  margin-top: 240px;
 
-  .logo {
-    margin: 0 2rem 0 0;
+  @media screen and (min-width: 560px) {
+    margin-top: 0;
   }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  nav {
-    text-align: left;
-    margin-left: -1rem;
-    font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
-  }
-} */
+}
 </style>
