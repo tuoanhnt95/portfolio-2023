@@ -14,12 +14,14 @@ import TechStacks from './components/TechStacks.vue'
         <div id="ribbon-photo">
           <div id="img-oanh" class="rounded-full"></div>
         </div>
-        <div id="banner-intro" class="border-solid border-2 border-indigo-600">
-          <Greeting class="mt-6 mb-10"/>
-          <TechStacks />
+        <div id="banner-intro" class="border-solid border-2 border-indigo-600 lg:h-96 flex items-center">
+          <div>
+            <Greeting class="mb-6 lg:mb-10"/>
+            <TechStacks />
+          </div>
         </div>
-      </div>  
-    </header>   
+      </div>
+    </header>
   </div>
 </template>
 
@@ -30,7 +32,7 @@ import TechStacks from './components/TechStacks.vue'
   width: 400px;
   height: 200px;
   background: orange;
-  transform-origin: 100% 0; 
+  transform-origin: 100% 0;
   /* or top right */
   transform: translate(0, -90%) rotate(-45deg);
 
@@ -48,7 +50,7 @@ import TechStacks from './components/TechStacks.vue'
   position: relative;
   left: -100px;
   transform: rotate(45deg);
-  
+
   @media screen and (min-width: 1024px) {
     width: 300px;
     height: 300px;
