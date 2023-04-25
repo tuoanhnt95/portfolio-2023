@@ -3,18 +3,17 @@
     <div class="text-2xl lg:text-3xl xl:text-4xl font-bold">
       My Projects
     </div>
-    <div class="grid grid-cols-3">
+    <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
       <div v-for="(project, i) in projects" :key="i">
         <div class="img-project" :style="{ backgroundImage: `url(${ 'src/assets/images/' + project.image})`}"></div>
-        {{ project.name }}
+        <div>{{ project.name }}</div>
+        <div class="font-sans" >{{ project.stack }}</div>
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
-// import { computed } from '@vue/reactivity';
-
 const projects = [
   {
     name: 'HealthWay',
@@ -42,8 +41,6 @@ const projects = [
     stack: 'Html, Css, Jvs, Rails'
   }
 ]
-// const imgSrc = computed(() => require(`@/assets/images/${projects.value[0].image}`))
-
 </script>
 
 <style scoped>
