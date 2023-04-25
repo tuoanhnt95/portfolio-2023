@@ -1,10 +1,11 @@
 <template>
     <div>
-        <div class="mb-4 text-3xl lg:text-4xl xl:text-6xl">
-          My name is <b>Oanh</b>
+        <div class="mb-4 grid sm: text-3xl lg:text-4xl xl:text-6xl">
+          <div>My name</div>
+          <div>is <b>Oanh</b></div>
         </div>
         <div class="text-xs">
-          I am a <b>fullstack</b> developer based in Tokyo
+          I am a <b>fullstack</b> developer in Tokyo
           <br>
           Curious to Learn, Eager to Create
         </div>
