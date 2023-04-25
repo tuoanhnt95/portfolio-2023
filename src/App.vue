@@ -4,17 +4,19 @@ import { RouterLink, RouterView } from 'vue-router'
 import Menu from './components/Menu.vue'
 import Greeting from './components/Greeting.vue'
 import TechStacks from './components/TechStacks.vue'
+import Projects from './components/Projects.vue'
+import Contact from './components/Contact.vue'
 </script>
 
 <template>
-  <div>
-    <header class="my-2 mx-6">
+  <div class="ml-8 lg:ml-16 md:ml-8">
+    <header>
       <Menu class="border-solid border-2 border-indigo-600"/>
-      <div>
+      <div class="my-4">
         <div id="ribbon-photo">
           <div id="img-oanh" class="rounded-full"></div>
         </div>
-        <div id="banner-intro" class="border-solid border-2 border-indigo-600 lg:h-96 lg:ml-12 md:ml-8 flex items-center">
+        <div id="banner-intro" class="border-solid border-2 border-indigo-600 lg:h-96 flex items-center">
           <div>
             <Greeting class="mb-6 lg:mb-10"/>
             <TechStacks />
@@ -22,6 +24,9 @@ import TechStacks from './components/TechStacks.vue'
         </div>
       </div>
     </header>
+    <Projects />
+    <Contact />
+    <footer></footer>
   </div>
 </template>
 

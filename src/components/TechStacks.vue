@@ -1,17 +1,17 @@
 <template>
-  <div class="font-mono">
+<div class="font-mono">
     <div class="flex"> <!-- backend -->
-      <div v-for="(stack, i) in backend" :key="i" :class="'bg-' + stack.color + ' rounded m-0.5 p-2 flex justify-center text-xs font-medium'">
+      <div v-for="(stack, i) in backend" :key="i" class="rounded m-0.5 p-2 flex justify-center text-xs font-medium" :class="'bg-' + stack.color">
         {{ stack.name }}
       </div>
     </div>
     <div class="flex"> <!-- frontend -->
-      <div v-for="(stack, i) in frontend" :key="i" :class="'bg-' + stack.color + ' rounded m-0.5 p-2 flex justify-center text-xs ' + stack.textColor + ' font-medium'">
+      <div v-for="(stack, i) in frontend" :key="i" class="rounded m-0.5 p-2 flex justify-center text-xs font-medium" :class="'bg-' + stack.color + '  ' + stack.textColor">
         {{ stack.name }}
       </div>
     </div>
     <div class="flex"> <!-- frontend -->
-      <div v-for="(stack, i) in database" :key="i" :class="'bg-' + stack.color + ' rounded m-0.5 p-2 flex justify-center text-xs ' + stack.textColor + ' font-medium'">
+      <div v-for="(stack, i) in database" :key="i" class="rounded m-0.5 p-2 flex justify-center text-xs font-medium" :class="'bg-' + stack.color + '  ' + stack.textColor">
         {{ stack.name }}
       </div>
     </div>
